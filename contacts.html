@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script defer src="assets/alpine.js" defer></script>
+<script src="contacts.js"></script>
+<body>
+    <nav class="topnav">
+        <div class="nav-profile-container">
+            <img class="profile-picture" src="https://i.postimg.cc/xdCsvkLL/logo.jpg">
+        </div>
+        <div class="nav-content-container">
+            <div><b>12</b> Contacts</div>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search.." name="search">
+            <i class="fa fa-search icon"></i>
+        </div>
+    </nav>
+
+    <section class="main-section" x-data="contacts()">
+        <template x-for="contact in contacts">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img class="profile-picture" src="https://i.postimg.cc/xdCsvkLL/logo.jpg">
+                </div>
+                <div class="profile-contact-name" x-text="contact.name">
+                </div>
+                <div class="profile-details">
+                    <p>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:abc@abc.com" x-text="contact.mail"></a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:9898989898" x-text="contact.phone"></a>
+                    </p>
+                    <p><i class="fa fa-info-circle"></i><span x-text="contact.relation"></span></p>
+
+                </div>
+            </div>
+        </template>
+    </section>
+
+    <div class='add-contact-action'>
+        <div class='item'>
+            <i class="fa fa-plus"></i>
+        </div>
+    </div>
+
+    <footer class="main-div_footer">made with ❤️ ~ <b>Sandeep Sala</b></footer>
+</body>
+</html>
