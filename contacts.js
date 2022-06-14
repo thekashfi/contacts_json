@@ -9,6 +9,3 @@ function contacts () {
         ]
     }
 }
-// window.onload = () => {
-//
-// }
