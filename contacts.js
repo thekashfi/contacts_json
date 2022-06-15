@@ -9,3 +9,4 @@ function contacts () {
         ]
     }
 }
+let foo = 'bar';
